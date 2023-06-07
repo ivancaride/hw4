@@ -6,6 +6,11 @@
     <%= form.text_field "name" %>
   </p>
   <p>
-    <%= form.submit %>
+    <%= form.submit "Add", :class => "btn btn-dark" %>
   </p>
+  <div>
+    <p>
+    <a href="/places/" class="btn btn-success">Back to all places</a>
+    </p>
+  </div>  
 <% end %>

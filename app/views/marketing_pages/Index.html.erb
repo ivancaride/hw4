@@ -1,0 +1,15 @@
+<style>
+body {
+  height: 400px;
+  background-image: url("https://img.freepik.com/foto-gratis/hermosa-playa-tropical-mar-oceano-coco-otro-arbol-alrededor-nube-blanca-cielo-azul_74190-13659.jpg?t=st=1686083080~exp=1686083680~hmac=55827fd274511cfdaafab72ffac53471b020385a50ea2cf4911f4aab2df2e047");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 25% 25%;
+}
+</style>
+<h2>Welcome! <span class="badge bg-secondary"></span></h2>
+<div>
+  <% if @current_user %>
+  <a href="/places" class="btn btn-primary">Places</a>
+  <% end %>
+</div>

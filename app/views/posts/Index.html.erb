@@ -1,0 +1,26 @@
+<h1>Posts</h1>
+
+  <% if @current_user%>
+   <% for post in @posts %>
+    <p>
+      <a href="/posts/<%= post["id"] %>"><%= post["title"] %> </a>
+      <p><%= post["posted_on"] %></p> 
+      <p><% if post.uploaded_image.attached? %>
+        <img src="<%= url_for(post.uploaded_image) %>" class="img-fluid">
+      <% else %>
+         <img src="<%= post["image"] %>" class="img-fluid">
+      <% end %></p> 
+    </p>
+    <div>
+    <p>
+    <a href="/places/new" class="btn btn-success">New place</a>
+    </p>
+</div>
+   <% end %>
+  <%else%>
+  <div>
+  <a href="/login" class="btn btn-dark">You need to login to access this screen!</a>
+  </div>
+  <%end%>
+<br>
+</br>
